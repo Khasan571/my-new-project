@@ -1,0 +1,366 @@
+.sharhlar {
+  min-height: 100vh;
+  padding: 120px 0 80px;
+  position: relative;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.sharhlar-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(0, 55, 64, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(0, 55, 64, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Back Button */
+.sharhlar .back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.sharhlar .back-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(-5px);
+}
+
+/* Header */
+.sharhlar-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.sharhlar-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sharhlar-subtitle {
+  font-size: 18px;
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Stats Section */
+.stats-section {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.stats-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats-rating {
+  text-align: center;
+}
+
+.stats-number {
+  font-size: 72px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  display: block;
+}
+
+.stats-stars {
+  margin: 16px 0;
+}
+
+.stats-stars i {
+  color: #fbbf24;
+  font-size: 24px;
+  margin: 0 2px;
+}
+
+.stats-total {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.stats-breakdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.stats-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bar-label {
+  width: 80px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.bar-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #003740 0%, #004a54 100%);
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.bar-count {
+  width: 30px;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: right;
+}
+
+/* Filter Section */
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.filter-label {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  color: #94a3b8;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #003740 0%, #004a54 100%);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.filter-btn i {
+  color: #fbbf24;
+  font-size: 12px;
+}
+
+/* Reviews Grid */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Review Card */
+.review-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 28px;
+  transition: all 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 55, 64, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.review-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(0, 55, 64, 0.3);
+}
+
+.review-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.review-user {
+  flex: 1;
+}
+
+.review-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.review-position {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.review-rating {
+  display: flex;
+  gap: 2px;
+}
+
+.review-rating i {
+  color: #fbbf24;
+  font-size: 14px;
+}
+
+.review-text {
+  font-size: 15px;
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.review-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.review-course,
+.review-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.review-course i,
+.review-date i {
+  color: #003740;
+  font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .stats-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .stats-main {
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .sharhlar {
+    padding: 100px 0 60px;
+  }
+
+  .sharhlar-title {
+    font-size: 32px;
+  }
+
+  .sharhlar-subtitle {
+    font-size: 16px;
+  }
+
+  .stats-section {
+    padding: 24px;
+  }
+
+  .stats-number {
+    font-size: 56px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-section {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .sharhlar-title {
+    font-size: 28px;
+  }
+
+  .review-card {
+    padding: 20px;
+  }
+
+  .review-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .filter-buttons {
+    flex-wrap: wrap;
+  }
+}

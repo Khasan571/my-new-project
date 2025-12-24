@@ -1,0 +1,168 @@
+/* ========================================
+   ROOT VARIABLES & RESET
+======================================== */
+:root {
+  --primary: #1e40af;
+  --primary-dark: #1e3a8a;
+  --primary-light: #3b82f6;
+  --secondary: #1d4ed8;
+  --accent: #60a5fa;
+  --gradient-1: linear-gradient(135deg, #1e40af 0%, #1d4ed8 50%, #3b82f6 100%);
+  --gradient-glow: linear-gradient(135deg, rgba(30, 64, 175, 0.4) 0%, rgba(29, 78, 216, 0.4) 100%);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 60px rgba(30, 64, 175, 0.3);
+  --shadow-glow-sm: 0 0 30px rgba(30, 64, 175, 0.2);
+}
+
+/* Dark Mode (Default) */
+[data-theme="dark"] {
+  --bg-primary: #003740;
+  --bg-secondary: #004a54;
+  --bg-card: #00565e;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border-color: rgba(0, 85, 100, 0.4);
+  --border-glow: rgba(0, 150, 170, 0.4);
+  --card-bg: rgba(0, 74, 84, 0.8);
+  --navbar-bg: rgba(0, 55, 64, 0.95);
+  --hover-bg: rgba(0, 100, 115, 0.2);
+  --glass-bg: rgba(0, 74, 84, 0.6);
+}
+
+/* Light Mode */
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --border-color: rgba(30, 64, 175, 0.2);
+  --border-glow: rgba(30, 64, 175, 0.4);
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --navbar-bg: rgba(248, 250, 252, 0.95);
+  --hover-bg: rgba(30, 64, 175, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 20px rgba(30, 64, 175, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 40px rgba(59, 130, 246, 0.6));
+  }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotateReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes morphing {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes scroll {
+  0%, 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translateY(8px);
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: rgba(30, 64, 175, 0.3);
+    box-shadow: 0 0 20px rgba(30, 64, 175, 0.1);
+  }
+  50% {
+    border-color: rgba(59, 130, 246, 0.6);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+  }
+}

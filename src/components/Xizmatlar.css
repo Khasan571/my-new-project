@@ -1,0 +1,276 @@
+.xizmatlar-page {
+  padding: 120px 0 80px;
+  background: #ffffff;
+  min-height: 100vh;
+  transition: background 0.4s ease;
+}
+
+[data-theme="dark"] .xizmatlar-page {
+  background: #003740;
+}
+
+/* Header */
+.xizmatlar-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.xizmatlar-header .header-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  color: #ffffff;
+  font-size: 24px;
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+}
+
+.xizmatlar-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .xizmatlar-header h1 {
+  color: #ffffff;
+}
+
+.xizmatlar-header p {
+  font-size: 15px;
+  color: #64748b;
+  margin: 0;
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .xizmatlar-header p {
+  color: #94a3b8;
+}
+
+/* Services Grid */
+.xizmatlar-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* Service Card */
+.xizmat-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .xizmat-card {
+  background: rgba(0, 74, 84, 0.35);
+  border-color: rgba(0, 150, 170, 0.25);
+}
+
+.xizmat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .xizmat-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.xizmat-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.xizmat-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.xizmat-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .xizmat-title {
+  color: #ffffff;
+}
+
+.xizmat-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0 0 12px 0;
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .xizmat-description {
+  color: #94a3b8;
+}
+
+/* Features */
+.xizmat-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.feature-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] .feature-tag {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Button */
+.btn-order {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-order:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-order i {
+  font-size: 12px;
+}
+
+/* Contact Section */
+.xizmatlar-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 16px;
+  transition: background 0.4s ease;
+}
+
+[data-theme="dark"] .xizmatlar-contact {
+  background: rgba(0, 74, 84, 0.3);
+}
+
+.xizmatlar-contact h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #475569;
+  margin: 0;
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .xizmatlar-contact h3 {
+  color: #94a3b8;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-btn.phone {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.contact-btn.phone:hover {
+  background: #059669;
+}
+
+.contact-btn.email {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.contact-btn.email:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .xizmatlar-page {
+    padding: 100px 0 60px;
+  }
+
+  .xizmatlar-header h1 {
+    font-size: 26px;
+  }
+
+  .xizmatlar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .xizmat-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .xizmat-features {
+    justify-content: center;
+  }
+
+  .xizmatlar-contact {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact-btn {
+    justify-content: center;
+  }
+}

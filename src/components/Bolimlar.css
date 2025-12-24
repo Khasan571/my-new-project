@@ -1,0 +1,502 @@
+.bolimlar-page {
+  padding: 120px 0 100px;
+  background: #ffffff;
+  min-height: 100vh;
+  transition: background 0.4s ease;
+}
+
+[data-theme="dark"] .bolimlar-page {
+  background: #003740;
+}
+
+/* Header */
+.bolimlar-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.bolimlar-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.02em;
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .bolimlar-title {
+  color: #ffffff;
+}
+
+.bolimlar-subtitle {
+  font-size: 16px;
+  color: #64748b;
+  margin: 0 0 30px 0;
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .bolimlar-subtitle {
+  color: #94a3b8;
+}
+
+.bolimlar-stats {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 32px;
+  background: #f8fafc;
+  border-radius: 100px;
+  transition: background 0.4s ease;
+}
+
+[data-theme="dark"] .bolimlar-stats {
+  background: rgba(0, 74, 84, 0.4);
+}
+
+.stat-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: #003740;
+}
+
+[data-theme="dark"] .stat-number {
+  color: #ffffff;
+}
+
+.stat-text {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 30px;
+  background: #e2e8f0;
+}
+
+/* Departments List */
+.bolimlar-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: background 0.4s ease;
+}
+
+[data-theme="dark"] .bolimlar-list {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+.bolim-item {
+  background: #ffffff;
+  transition: background 0.4s ease;
+}
+
+[data-theme="dark"] .bolim-item {
+  background: #003740;
+}
+
+.bolim-item.active {
+  background: #fafbfc;
+}
+
+[data-theme="dark"] .bolim-item.active {
+  background: rgba(0, 74, 84, 0.35);
+}
+
+/* Bolim Header */
+.bolim-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 28px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.bolim-header:hover {
+  background: #f8fafc;
+}
+
+[data-theme="dark"] .bolim-header:hover {
+  background: rgba(0, 74, 84, 0.25);
+}
+
+.bolim-number {
+  font-size: 14px;
+  font-weight: 600;
+  color: #003740;
+  width: 32px;
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .bolim-number {
+  color: #ffffff;
+}
+
+.bolim-info {
+  flex: 1;
+}
+
+.bolim-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .bolim-info h3 {
+  color: #ffffff;
+}
+
+.bolim-meta {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.bolim-expand {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  border-radius: 8px;
+  color: #64748b;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-theme="dark"] .bolim-expand {
+  background: rgba(0, 74, 84, 0.4);
+  border-color: rgba(0, 150, 170, 0.3);
+  color: #94a3b8;
+}
+
+.bolim-expand:hover {
+  border-color: #3b82f6;
+  color: #ffffff;
+}
+
+.bolim-item.active .bolim-expand {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* Colorful expand buttons for different departments */
+.bolim-item:nth-child(1).active .bolim-expand {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.bolim-item:nth-child(2).active .bolim-expand {
+  background: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+.bolim-item:nth-child(3).active .bolim-expand {
+  background: #10b981;
+  border-color: #10b981;
+}
+
+.bolim-item:nth-child(4).active .bolim-expand {
+  background: #f59e0b;
+  border-color: #f59e0b;
+}
+
+.bolim-item:nth-child(5).active .bolim-expand {
+  background: #ec4899;
+  border-color: #ec4899;
+}
+
+.bolim-item:nth-child(6).active .bolim-expand {
+  background: #06b6d4;
+  border-color: #06b6d4;
+}
+
+/* Bolim Content */
+.bolim-content {
+  padding: 0 28px 28px;
+  padding-left: 80px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Leader */
+.bolim-leader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: all 0.4s ease;
+}
+
+[data-theme="dark"] .bolim-leader {
+  background: rgba(0, 74, 84, 0.35);
+  border-color: rgba(0, 150, 170, 0.25);
+}
+
+.bolim-leader img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.leader-info {
+  flex: 1;
+}
+
+.leader-position {
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.leader-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 4px 0 10px 0;
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .leader-info h4 {
+  color: #ffffff;
+}
+
+.leader-contacts {
+  display: flex;
+  gap: 20px;
+}
+
+.leader-contacts a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.leader-contacts a:hover {
+  color: #ffffff;
+}
+
+.leader-contacts i {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+/* Staff Section */
+.bolim-staff {
+  margin-bottom: 20px;
+}
+
+.bolim-staff h5 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px 0;
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.staff-member {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .staff-member {
+  background: rgba(0, 74, 84, 0.3);
+}
+
+.staff-member:hover {
+  background: #f1f5f9;
+  transform: translateX(4px);
+}
+
+[data-theme="dark"] .staff-member:hover {
+  background: rgba(0, 74, 84, 0.4);
+}
+
+.staff-member img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.staff-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.staff-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .staff-name {
+  color: #ffffff;
+}
+
+.staff-position {
+  font-size: 12px;
+  color: #64748b;
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .staff-position {
+  color: #94a3b8;
+}
+
+/* Tasks */
+.bolim-tasks h5 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px 0;
+}
+
+.bolim-tasks ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bolim-tasks li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.bolim-tasks li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+/* Colorful task bullets */
+.bolim-item:nth-child(1) .bolim-tasks li::before { background: #3b82f6; }
+.bolim-item:nth-child(2) .bolim-tasks li::before { background: #8b5cf6; }
+.bolim-item:nth-child(3) .bolim-tasks li::before { background: #10b981; }
+.bolim-item:nth-child(4) .bolim-tasks li::before { background: #f59e0b; }
+.bolim-item:nth-child(5) .bolim-tasks li::before { background: #ec4899; }
+.bolim-item:nth-child(6) .bolim-tasks li::before { background: #06b6d4; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bolimlar-page {
+    padding: 100px 0 80px;
+  }
+
+  .bolimlar-title {
+    font-size: 32px;
+  }
+
+  .bolimlar-stats {
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 28px;
+    border-radius: 16px;
+  }
+
+  .stat-divider {
+    width: 60px;
+    height: 1px;
+  }
+
+  .bolim-header {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .bolim-number {
+    display: none;
+  }
+
+  .bolim-content {
+    padding: 0 20px 20px;
+    padding-left: 20px;
+  }
+
+  .bolim-leader {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .leader-contacts {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .bolim-info h3 {
+    font-size: 14px;
+  }
+
+  .bolim-expand {
+    width: 32px;
+    height: 32px;
+  }
+}

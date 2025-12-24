@@ -1,0 +1,581 @@
+.korrupsiya-page {
+  padding: 120px 0 100px;
+  background: #ffffff;
+  min-height: 100vh;
+  transition: background 0.4s ease;
+}
+
+[data-theme="dark"] .korrupsiya-page {
+  background: #003740;
+}
+
+/* Header */
+.korrupsiya-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header-badge {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  color: #ffffff;
+  font-size: 32px;
+  box-shadow: 0 10px 40px rgba(220, 38, 38, 0.3);
+}
+
+.korrupsiya-header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.02em;
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .korrupsiya-header h1 {
+  color: #ffffff;
+}
+
+.korrupsiya-header p {
+  font-size: 16px;
+  color: #64748b;
+  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .korrupsiya-header p {
+  color: #94a3b8;
+}
+
+/* Main Content */
+.korrupsiya-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+  align-items: start;
+}
+
+/* Banner Section - Original Image Style */
+.korrupsiya-banner-section {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(30, 64, 175, 0.3);
+  min-height: 500px;
+  background: linear-gradient(180deg, #a5b4fc 0%, #818cf8 30%, #4f46e5 70%, #1e3a8a 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+/* Banner Header */
+.banner-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 10;
+}
+
+.banner-logo {
+  width: 44px;
+  height: 44px;
+  background: #1e3a8a;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.banner-org-name {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  font-weight: 800;
+  color: #1e3a8a;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Banner Main */
+.banner-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+
+/* Globe Background */
+.globe-bg {
+  position: absolute;
+  font-size: 280px;
+  color: rgba(96, 165, 250, 0.3);
+  z-index: 1;
+}
+
+/* Prohibition Sign */
+.prohibition-sign {
+  position: relative;
+  z-index: 5;
+}
+
+.sign-circle {
+  width: 180px;
+  height: 180px;
+  border: 14px solid #dc2626;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.sign-line {
+  position: absolute;
+  width: 90%;
+  height: 14px;
+  background: #dc2626;
+  transform: rotate(-45deg);
+  border-radius: 7px;
+  z-index: 10;
+}
+
+.hands-exchange {
+  font-size: 55px;
+  color: #22c55e;
+  z-index: 5;
+}
+
+/* Curved Text */
+.curved-text {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 900;
+  color: #dc2626;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  white-space: nowrap;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 6px 20px;
+  border-radius: 25px;
+}
+
+.top-text {
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-12deg);
+}
+
+.bottom-text {
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%) rotate(12deg);
+}
+
+/* City Background */
+.city-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+.building {
+  background: rgba(30, 58, 138, 0.4);
+  border-radius: 4px 4px 0 0;
+  flex-shrink: 0;
+}
+
+.b1 { width: 40px; height: 60px; }
+.b2 { width: 30px; height: 90px; }
+.b3 { width: 50px; height: 70px; }
+.b4 { width: 35px; height: 100px; }
+.b5 { width: 45px; height: 55px; }
+.b6 { width: 55px; height: 85px; }
+.b7 { width: 30px; height: 65px; }
+.b8 { width: 40px; height: 75px; }
+
+/* Contact Section */
+.korrupsiya-contact-section {
+  background: #f8fafc;
+  border-radius: 24px;
+  padding: 40px;
+  transition: background 0.4s ease;
+}
+
+[data-theme="dark"] .korrupsiya-contact-section {
+  background: rgba(0, 74, 84, 0.4);
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.contact-header i {
+  font-size: 28px;
+  color: #1e40af;
+}
+
+[data-theme="dark"] .contact-header i {
+  color: #60a5fa;
+}
+
+.contact-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .contact-header h2 {
+  color: #ffffff;
+}
+
+.contact-description {
+  font-size: 15px;
+  color: #64748b;
+  margin: 0 0 28px 0;
+  line-height: 1.6;
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .contact-description {
+  color: #94a3b8;
+}
+
+/* Contact Cards */
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .contact-card {
+  background: rgba(0, 74, 84, 0.5);
+  border-color: rgba(0, 150, 170, 0.25);
+}
+
+.contact-card:hover {
+  transform: translateX(8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.contact-card-icon.phone {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.contact-card-icon.email {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.contact-card-icon.telegram {
+  background: linear-gradient(135deg, #0088cc 0%, #0077b5 100%);
+}
+
+.contact-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-card-label {
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 500;
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .contact-card-label {
+  color: #94a3b8;
+}
+
+.contact-card-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .contact-card-value {
+  color: #ffffff;
+}
+
+.contact-card-value:hover {
+  color: #3b82f6;
+}
+
+/* Social Section */
+.social-section {
+  padding-top: 24px;
+  border-top: 1px solid #e2e8f0;
+  transition: border-color 0.4s ease;
+}
+
+[data-theme="dark"] .social-section {
+  border-top-color: rgba(0, 150, 170, 0.2);
+}
+
+.social-section h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 16px 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon.facebook {
+  background: linear-gradient(135deg, #1877f2 0%, #0d65d9 100%);
+}
+
+.social-icon.telegram-social {
+  background: linear-gradient(135deg, #0088cc 0%, #0077b5 100%);
+}
+
+.social-icon.instagram {
+  background: linear-gradient(135deg, #e4405f 0%, #c13584 100%);
+}
+
+.social-icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Info Section */
+.korrupsiya-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.info-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 32px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .info-card {
+  background: rgba(0, 74, 84, 0.35);
+  border-color: rgba(0, 150, 170, 0.25);
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.info-card:nth-child(1):hover { border-color: #f59e0b; }
+.info-card:nth-child(2):hover { border-color: #3b82f6; }
+.info-card:nth-child(3):hover { border-color: #8b5cf6; }
+
+.info-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.info-card:nth-child(1) .info-icon {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.info-card:nth-child(2) .info-icon {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.info-card:nth-child(3) .info-icon {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.info-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .info-card h3 {
+  color: #ffffff;
+}
+
+.info-card p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.6;
+  transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .info-card p {
+  color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .korrupsiya-content {
+    grid-template-columns: 1fr;
+  }
+
+  .korrupsiya-banner-section {
+    min-height: 420px;
+  }
+
+  .korrupsiya-info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .korrupsiya-page {
+    padding: 100px 0 80px;
+  }
+
+  .korrupsiya-header h1 {
+    font-size: 32px;
+  }
+
+  .header-badge {
+    width: 64px;
+    height: 64px;
+    font-size: 26px;
+  }
+
+  .korrupsiya-banner-section {
+    min-height: 380px;
+    padding: 20px;
+  }
+
+  .sign-circle {
+    width: 150px;
+    height: 150px;
+    border-width: 12px;
+  }
+
+  .sign-line {
+    height: 12px;
+  }
+
+  .hands-exchange {
+    font-size: 45px;
+  }
+
+  .curved-text {
+    font-size: 14px;
+    padding: 5px 14px;
+    letter-spacing: 2px;
+  }
+
+  .globe-bg {
+    font-size: 200px;
+  }
+
+  .city-bg {
+    height: 80px;
+  }
+
+  .building {
+    transform: scale(0.7);
+  }
+
+  .korrupsiya-contact-section {
+    padding: 28px;
+  }
+
+  .korrupsiya-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .korrupsiya-header h1 {
+    font-size: 28px;
+  }
+
+  .contact-header h2 {
+    font-size: 22px;
+  }
+
+  .contact-card-value {
+    font-size: 16px;
+  }
+}
